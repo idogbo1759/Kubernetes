@@ -112,6 +112,9 @@ kubectl get svc -n kube-system
 Get Pods 
 kubectl get pods -n kube-system
 
+Get Name Space
+Kubectl get ns -n kube-system
+
 Get Nodes
 kubectl get nodes -n kube-system
 
