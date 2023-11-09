@@ -49,11 +49,19 @@ aws configure
 Create EKS Cluster with two worker nodes using eksctl
 eksctl create cluster --name demo-eks --region us-east-2 --nodegroup-name my-nodes --node-type t3.medium --managed --nodes 2 
 
-git clone git@github.com:idogbo1759/Kubernetes_Elk_Logging.git
-cd monitoring/kubernetes-elk
-kubectl apply -f elasticsearch-ss.yaml
-kubectly get svc -n kube-system
+git clone https://github.com/idogbo1759/Kubernetes
+cd Kubernetes/kubernetes-elk
 
+Execute to List Directory
+Ls -l
+
+Install Elastic Search using this command 
+kubectl apply -f elasticsearch-ss.yaml
+
+Get Service using this command
+kubectl get svc -n kube-system
+
+Get External and Internal IP address using the command
 kubectl get node -o wide
 copy the external ip address and add 31335: example : http://3.14.66.232:31335/
 go to ec2 cluster on aws, click on the EC2 instance that matches same ip address you copied, 
